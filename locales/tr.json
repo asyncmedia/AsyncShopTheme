@@ -8,7 +8,7 @@
       "login_form_error": "Yanlış parola!",
       "login_form_submit": "Gir",
       "modal": "Parola modu",
-      "admin_link_html": "Mağaza sahibi misiniz? <a href=\"/admin\" class=\"link underlined-link\">Buradan oturum açın</a>",
+      "admin_link_html": "Mağaza sahibi misiniz? <a href=\"\/admin\" class=\"link underlined-link\">Buradan oturum açın<\/a>",
       "powered_by_shopify_html": "Bu mağaza {{ shopify }} tarafından desteklenir"
     },
     "social": {
@@ -58,7 +58,7 @@
   "accessibility": {
     "skip_to_text": "İçeriğe atla",
     "close": "Kapat",
-    "unit_price_separator": "/",
+    "unit_price_separator": "\/",
     "vendor": "Satıcı:",
     "error": "Hata",
     "refresh_page": "Bir seçim yapmanız sayfanın tamamının yenilenmesine neden olur.",
@@ -68,7 +68,7 @@
       "external": "Harici web sitesini açar.",
       "new_window_and_external": "Harici web sitesini yeni bir pencerede açar."
     },
-    "current_slide": "[current]/[total] ürün",
+    "current_slide": "[current]\/[total] ürün",
     "next_slide": "Sağa kaydır",
     "previous_slide": "Sola kaydır",
     "loading": "Yükleniyor..."
@@ -134,8 +134,8 @@
         "view_store_info": "Mağaza bilgilerini görüntüleyin",
         "check_other_stores": "Diğer mağazalardaki stok durumunu kontrol edin",
         "pick_up_available": "Teslim alım kullanılabilir",
-        "pick_up_available_at_html": "Teslim alım <strong>{{ location_name }}</strong> konumunda kullanılabilir",
-        "pick_up_unavailable_at_html": "Teslim alım <strong>{{ location_name }}</strong> konumunda şu anda kullanılamıyor",
+        "pick_up_available_at_html": "Teslim alım <strong>{{ location_name }}<\/strong> konumunda kullanılabilir",
+        "pick_up_unavailable_at_html": "Teslim alım <strong>{{ location_name }}<\/strong> konumunda şu anda kullanılamıyor",
         "unavailable": "Teslim alım stok durumu yüklenemedi",
         "refresh": "Yenile"
       }
@@ -196,9 +196,9 @@
       "empty": "Sepetiniz boş",
       "cart_error": "Sepetiniz güncellenirken bir hata oluştu. Lütfen tekrar deneyin.",
       "cart_quantity_error_html": "Sepetinize bu üründen yalnızca [quantity] adet ekleyebilirsiniz.",
-      "taxes_and_shipping_policy_at_checkout_html": "Vergiler ve <a href=\"{{ link }}\">kargo</a>, ödeme sayfasında hesaplanır",
+      "taxes_and_shipping_policy_at_checkout_html": "Vergiler ve <a href=\"{{ link }}\">kargo<\/a>, ödeme sayfasında hesaplanır",
       "taxes_included_but_shipping_at_checkout": "Vergi dahildir ve kargo, ödeme sayfasında hesaplanır",
-      "taxes_included_and_shipping_policy_html": "Vergi dahildir. <a href=\"{{ link }}\">Kargo</a>, ödeme sayfasında hesaplanır.",
+      "taxes_included_and_shipping_policy_html": "Vergi dahildir. <a href=\"{{ link }}\">Kargo<\/a>, ödeme sayfasında hesaplanır.",
       "taxes_and_shipping_at_checkout": "Vergiler ve kargo, ödeme sayfasında hesaplanır",
       "headings": {
         "product": "Ürün",
@@ -236,10 +236,10 @@
     }
   },
   "localization": {
-    "country_label": "Ülke/bölge",
+    "country_label": "Ülke\/bölge",
     "language_label": "Dil",
     "update_language": "Dili güncelle",
-    "update_country": "Ülke/bölge bilgisini güncelle"
+    "update_country": "Ülke\/bölge bilgisini güncelle"
   },
   "customer": {
     "account": {
@@ -268,7 +268,7 @@
       "address1": "Adres 1",
       "address2": "Adres 2",
       "city": "Şehir",
-      "country": "Ülke/bölge",
+      "country": "Ülke\/bölge",
       "province": "İl",
       "zip": "Posta kodu",
       "phone": "Telefon",
