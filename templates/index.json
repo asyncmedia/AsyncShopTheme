@@ -76,7 +76,7 @@
     "16262083310d785186": {
       "type": "slider-product-carusell",
       "settings": {
-        "sectionCollection": "homepage"
+        "sectionCollection": "all"
       }
     }
   },
