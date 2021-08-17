@@ -155,9 +155,11 @@
     <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>
     {{ 'gocart.js' | asset_url | script_tag }}
+    
+    {%- section 'go-cart' -%}
     <script>
       var goCart = new GoCart();
     </script>
-    {%- section 'go-cart' -%}
   </body>
+
 </html>

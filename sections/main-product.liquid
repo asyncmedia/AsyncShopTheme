@@ -12,6 +12,7 @@
 {{ 'component-share.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-popup.css' | asset_url | stylesheet_tag }}
 
+
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -29,7 +30,7 @@
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
         </a>
-        <ul class="product__media-list grid grid--peek list-unstyled slider slider--mobile" role="list">
+        <ul class="grid product__media-list grid--peek list-unstyled slider slider--mobile" role="list">
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign media = product.selected_or_first_available_variant.featured_media -%}
             <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
@@ -365,7 +366,7 @@
               <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">{{ block.settings.link_label }}</a>
           {%- when 'share' -%}
             <share-button class="share-button">
-              <button class="share-button__button button button--tertiary hidden">
+              <button class="hidden share-button__button button button--tertiary">
                 {% render 'icon-share' %}
                 {{ 'general.share.share' | t }}
               </button>
@@ -390,7 +391,7 @@
                     {% render 'icon-clipboard' %}
                     {{ 'general.share.copy_to_clipboard' | t }}
                   </button>
-                  <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status" aria-hidden="true">
+                  <span id="ShareMessage-{{ section.id }}" class="hidden share-button__message" role="status" aria-hidden="true">
                     {{ 'general.share.success_message' | t }}
                   </span>
                 </div>
@@ -474,14 +475,22 @@
               </div>
             </noscript>
           {%- when 'buy_buttons' -%}
+
+{% assign formId = "add-to-cart-" | append: product.handle | append: "-" | append: collection.handle | append: "-" | append: section.id %}
+
+
+<script>
+  let formInput = document.getElementById(productVariant);
+  console.log(formInput);
+</script>
             <product-form>
-              {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              {%- form 'product', product, id: formId, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                <input type="hidden" id="productVariant" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                 <div class="product-form__buttons">
                   <button
                     type="submit"
                     name="add"
-                    class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                    class="product-form__submit button button--full-width js-go-cart-add-to-cart {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                   {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                   >
                       {%- if product.selected_or_first_available_variant.available -%}
